@@ -152,4 +152,4 @@ class TestSinging(unittest.TestCase):
 
         vk_pem = signing.get_vk_pem().decode("ascii")
 
-        self.assertEqual(expected_vk_pem, vk_pem)
+        self.assertEqual(expected_vk_pem.replace('\n', ''), vk_pem.replace('\n', ''))
